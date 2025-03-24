@@ -1,0 +1,7 @@
+HuuMinh-K8s
+
+az acr create --resource-group HuuMinh-K8s --name acr23094 --sku Basic
+
+az aks create --resource-group HuuMinh-K8s --name aks-cluster-23094 --node-count 2 --attach-acr acr23094 --generate-ssh-keys
+
+az aks get-credentials --resource-group HuuMinh-K8s --name aks-cluster-23094
